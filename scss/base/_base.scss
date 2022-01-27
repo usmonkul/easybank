@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 3px dashed #000;
+  outline-offset: 3px;
+}
+
+a {
+  text-decoration: none;
+}

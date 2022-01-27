@@ -1,36 +1,7 @@
-// Imports
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
-
-@import "base/animations";
+@import "abstracts/_veriables";
 @import "base/base";
-@import "base/typography";
-@import "base/utilities";
-
-@import "components/button";
-
-
-@import "pages/home";
-
-
+@import "components/_buttons";
 /* GENERAL */
-html {
-  box-sizing: border-box;
-  height: 100%;
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-*:focus {
-  outline: 3px dashed #000;
-  outline-offset: 3px;
-}
 
 body {
   display: flex;
@@ -38,7 +9,8 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
   background-color: #fff;
 }
 
@@ -60,44 +32,46 @@ img {
 
 /* CONTAINER */
 .container {
-  max-width: 900px;
+  max-width: 1440px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
   margin-right: auto;
 }
+// mixins
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
 
-# Front-end Style Guide
+.main-content {
+  flex-grow: 1;
+}
 
-## Layout
+// Header
 
-The designs were created to the following widths:
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &-inner {
+    @include flexCenter;
+    justify-content: space-between;
+    .nav-list {
+      @include flexCenter;
+      list-style: none;
+      .nav-item {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+        .nav-link {
+          color: $grayish-blue;
+        }
+      }
+    }
+  }
+}
 
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Dark Blue: hsl(233, 26%, 24%)
-- Lime Green: hsl(136, 65%, 51%)
-- Bright Cyan: hsl(192, 70%, 51%)
-
-### Neutral
-
-- Grayish Blue: hsl(233, 8%, 62%)
-- Light Grayish Blue: hsl(220, 16%, 96%)
-- Very Light Gray: hsl(0, 0%, 98%)
-- White: hsl(0, 0%, 100%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 18px
-
-### Font
-
-- Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
-- Weights: 300, 400, 700
+// hero
+.hero-section {
+  background-color: $light-gray;
+}

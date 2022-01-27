@@ -1,0 +1,11 @@
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(
+    to right,
+    $primary-line-green,
+    $primary-bright-Cyan
+  );
+  border-radius: 30px;
+  color: $white;
+}
