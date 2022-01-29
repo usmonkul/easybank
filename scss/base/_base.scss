@@ -11,8 +11,8 @@ html {
 }
 
 *:focus {
-  outline: 3px dashed #000;
-  outline-offset: 3px;
+  outline: 3px dashed $primary-line-green;
+  outline-offset: 5px;
 }
 
 a {
