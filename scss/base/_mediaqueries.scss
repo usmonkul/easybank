@@ -1,0 +1,96 @@
+@media screen and (max-width: 415px) {
+  html {
+    font-size: 48.5%;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navbar {
+    display: none;
+  }
+  .header {
+    .header-inner {
+      .btn-header {
+        display: none;
+      }
+      .humberger-menu {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url(/img/icon-hamburger.svg);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .toggle {
+        background-size: 20px;
+        background-image: url(/img/icon-close.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+  .hero-section {
+    background-size: 700px;
+    background-image: url(/img/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top -310px right calc(50% + 50px);
+    .hero-inner {
+      text-align: center;
+      .hero-text-content {
+        padding-top: 250px;
+      }
+      .hero-img {
+        display: block;
+        position: absolute;
+        left: 0%;
+        top: -20%;
+      }
+    }
+  }
+  .features-inner {
+    text-align: center;
+  }
+  .feature-card {
+    @include flexColumn($align: center);
+  }
+  .articles-inner {
+    @include flexColumn($align: center);
+    .articles-card-list {
+      justify-content: center;
+      .articles-card-item {
+        margin-bottom: 20px;
+        margin-right: 0;
+        text-align: left;
+      }
+    }
+  }
+  .footer {
+    .footer-inner {
+      @include flexColumn($align: center);
+      .logo-social-media-links {
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-right: 0;
+        .social-media-links {
+          margin-top: 30px;
+        }
+      }
+      .footer-nav-list {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .list-1 {
+        margin-right: 0;
+      }
+      .fo0ter-btn-copyright {
+        align-items: center;
+        margin-left: 0;
+        .footer-btn {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
