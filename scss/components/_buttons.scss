@@ -1,9 +1,10 @@
 .btn {
   display: inline-block;
-  padding: 15px 40px;
-  border-radius: 30px;
+  padding: 8px 36px 8px 33px;
+  border-radius: 22px;
   color: $white;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 28px;
 }
 .btn-primary {
   background: linear-gradient(
@@ -11,6 +12,8 @@
     $primary-line-green,
     $primary-bright-Cyan
   );
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .btn-primary:hover {
   opacity: 0.6;

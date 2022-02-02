@@ -2,10 +2,6 @@
   html {
     font-size: 48.5%;
   }
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .navbar {
     display: none;
   }
@@ -51,16 +47,29 @@
   }
   .features-inner {
     text-align: center;
+    .features-heading {
+      width: 300px;
+    }
+    .features-text {
+      width: 327px;
+    }
+    .feature-cards-list {
+      justify-content: center;
+      .feature-card {
+        @include flexColumn($align: center);
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
   }
-  .feature-card {
-    @include flexColumn($align: center);
-  }
+
   .articles-inner {
     @include flexColumn($align: center);
     .articles-card-list {
       justify-content: center;
       .articles-card-item {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         margin-right: 0;
         text-align: left;
       }
@@ -71,10 +80,9 @@
       @include flexColumn($align: center);
       .logo-social-media-links {
         margin-right: 0;
-        margin-bottom: 20px;
-        margin-right: 0;
+        margin-bottom: 30px;
         .social-media-links {
-          margin-top: 30px;
+          margin-top: 34px;
         }
       }
       .footer-nav-list {
@@ -88,7 +96,7 @@
         align-items: center;
         margin-left: 0;
         .footer-btn {
-          margin-top: 20px;
+          margin-top: 25px;
         }
       }
     }
